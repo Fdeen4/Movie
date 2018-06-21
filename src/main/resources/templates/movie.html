@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Movie Info</title>
+    <link rel="stylesheet" href="/css/formcss.css">
+</head>
+<body>
+<p>Enter information about a Movie you like</p>
+<form th:action="@{/movie}" th:object="${aMovie}" method="post">
+    <input type="hidden" th:field="*{id}">
+
+    <label for="title">Title:</label>
+    <input type="text" th:field="*{title}">
+
+    <label for="year">Year of Release:</label>
+    <input type="text" th:field="*{year}">
+
+    <label for="director">Director:</label>
+    <input type="text" th:field="*{director}">
+
+    <input type="submit" value="Submit Movie">
+
+</form>
+
+</body>
+</html>
